@@ -12,5 +12,5 @@
       replicaCount: 1
       image:
         repository: quay.io/krubot/app-operator
-        tag: latest
+        tag: v0.0.1
         pullPolicy: Always
