@@ -2,12 +2,12 @@
   apiVersion: helm.integrations.flux.weave.works/v1alpha2
   kind: FluxHelmRelease
   metadata:
-    name: app-operator
+    name: apps
     namespace: operator
     labels:
-      chart: app-operator
+      chart: apps
   spec:
-    chartGitPath: app-operator
+    chartGitPath: apps
     values:
       replicaCount: 1
       image:
