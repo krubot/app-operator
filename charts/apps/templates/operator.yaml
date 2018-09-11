@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "app-operator.fullname" . }}
+  name: {{ include "apps.fullname" . }}
   labels:
-    app: {{ include "app-operator.name" . }}
-    chart: {{ include "app-operator.chart" . }}
+    app: {{ include "apps.name" . }}
+    chart: {{ include "apps.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "app-operator.name" . }}
+      app: {{ include "apps.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ include "app-operator.name" . }}
+        app: {{ include "apps.name" . }}
         release: {{ .Release.Name }}
     spec:
       containers:
