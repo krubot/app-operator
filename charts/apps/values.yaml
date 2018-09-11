@@ -5,3 +5,6 @@ image:
   repository: quay.io/krubot/app-operator
   tag: latest
   pullPolicy: Always
+
+nameOverride: ""
+fullnameOverride: ""
